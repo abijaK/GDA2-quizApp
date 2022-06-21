@@ -1,8 +1,11 @@
 /* Front-end Style for SIGN UP page */
 
-/* -- Background -- */
-body {
-    background-image: ;
+/* -- Background-on-desktop -- */
+@media screen (min-width : 1440px) {
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+    }
+    
 }
 
 /* # Front-end Style Guide
