@@ -54,7 +54,7 @@ body{
     width: 360px;
     height: 450px;
     position: relative;
-    bottom: 10px;
+    bottom: 12px;
     box-sizing: border-box;
     border: 10px solid white;
     border-radius: 5px;
@@ -71,28 +71,30 @@ body{
 
 }
 .rightside form .trial{
-    width: 300px;
+    width: 290px;
     height: 50px;
     background-color: hsl(154, 59%, 51%);
     color: white;
     position: relative;
-    left: 10px;
+    left: 24px;
 }
 .linkeed{
     color: hsl(0, 100%, 74%);
     opacity: 0.6;
     font: 10px;
+    font-size: 8px;
     font-weight: 400px;
     position: relative;
-    left: 70px;
+    left: 0px;
+    text-align: center;
 }
 .linkeed span{
     color: #333; 
     font: 10px;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 400px;
     position: relative;
-    left: -10px;
+    left: -2px;
 }
 
 /*code */
@@ -110,7 +112,7 @@ body{
     left: 210px;
     font-size: 10px;
     color: hsl(0, 100%, 74%);
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 /* suite mobile*/
