@@ -4,11 +4,12 @@
     margin: 0;
 }
 body{
-    background-image: url(image/bg-intro-desktop.png);
+    /* background-image: url(image/bg-intro-desktop.png); */
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     width: 100%;
     height: 100%;
 }
-.container{
+/* .container{
     background-color: hsl(0, 100%, 74%) ;
     display: flex;
     justify-content: space-around;
@@ -95,12 +96,12 @@ body{
     font-weight: 400px;
     position: relative;
     left: -2px;
-}
+} */
 
 /*code */
 
 
-.images{
+/* .images{
     position: relative;
     left: 300px;
     bottom: 58px;
@@ -112,11 +113,11 @@ body{
     left: 210px;
     font-size: 10px;
     color: hsl(0, 100%, 74%);
-    /* visibility: hidden; */
-}
+    visibility: hidden;
+} */
 
 /* suite mobile*/
-@media only screen and (max-width: 520px){
+/* @media only screen and (max-width: 520px){
    
-}
+} */
     
