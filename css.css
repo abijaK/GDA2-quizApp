@@ -17,100 +17,85 @@ body{
     overflow: hidden;
 }
 
-/* .container {
-    position: absolute;
-    
-} */
+.container {
+    max-width: 95%;
+}
 
 .form-container {
     width: 355px;
-    height: 490px;
+    height: 500px;
     position: relative;
     background: #FFFFFF;
     max-width: 100%;
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
-/* 
-    background-color: white;
-    width: 370px;
-    height: 500px;
-    padding: 20px auto; */
 }
 
-.header, form {
-    /* position: absolute; */
+form {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
 }
 
 .header {
-    /* height: 40%; */
-    /* position: absolute; */
-
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    padding: 15px;
-    text-align: center;
-    /* gap: 2rem; */
-    background-color: rgb(23, 168, 194);
-}
+    gap: 1.9rem;
+    padding: 25px 25px 0 25px ;
+} 
 
 h1 {
     font-size: 32px;
     font-weight: 500;
     line-height: 39px;
+    text-align: center;
     letter-spacing: 0em;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #555555;
-
 }
 
 p {
+    text-align: center;
+    line-height: 1.4rem;
+    font-size: 14px;
     color: #555555;
-    letter-spacing: 2px;
-    font-size: 19px;
+    padding: 0;
 }
-
-/* form {
-    bottom: 0;
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-bottom: 40px;
-    background-color: bisque;
-} */
 
 .name-container, .email-container {
-     display: flex;
-     flex-direction: column;
-     gap: .5rem;
-}
-/*
-form {
-    width: 100%;
+    gap: .5rem;
+    width: 80%;
     display: flex;
+    position: relative;
     flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+    margin: 0 10px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-form div {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    width: 100%;
-}
-
-div input {
+.name-container input, .email-container input {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
     padding: 10px;
-    margin: 5px 20px;
+    width: 90%;
 }
 
-div label {
-    margin: 5px 20px;
-} */
+.name-container label, .email-container label{
+    color: #555555;
+    font-size: 14px;
+}
+
+#commencer-btn {
+    padding: 10px;
+    width: 150px;
+    color: #FFFFFF;
+    font-weight: 500;
+    border: none;
+    border-radius: 1px;
+    background: #028A3D;
+    box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
+}
