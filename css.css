@@ -79,7 +79,7 @@ p {
 }
 
 .name-container input, .email-container input {
-    width: 90%;
+    width: 88%;
     padding: 10px;
     color: #555555;
     background: #FFFFFF;
@@ -104,4 +104,73 @@ p {
     border-radius: 1px;
     background: #028A3D;
     box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
+}
+
+/* =====================
+    Style for Questions 
+   ===================== */
+
+.header-topic {
+    position: relative;
+   padding: 40px 19px 20px 19px;
+}
+
+.header-topic p {
+    text-align: center;    
+}
+
+#question-title {
+    padding: 0px 20px 0px 20px;
+    min-width: 89%;
+}
+
+#question-title label[for=question1]{
+    position: absolute;
+    color: #555555;
+    font-size: 10px;
+    left: 20px;
+}
+
+.counter {
+    padding: 3px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #028A3D;
+    margin-bottom: 15px;
+    border: 1px solid #555555;
+}
+
+.response {
+    padding: 0px 20px;
+    min-width: 89%;
+}
+
+.input-container {
+    /* margin-left: 10px; */
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.418);
+}
+
+#button-container {
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Exit-btn, #Next-btn {
+    width: 100px;
+    border: none;
+    padding: 10px;
+    color: #FFFFFF;
+    font-weight: 500;
+    box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
+}
+
+#Exit-btn {
+    background: orange;
+}
+
+#Next-btn {
+    background: #028A3D;
 }
