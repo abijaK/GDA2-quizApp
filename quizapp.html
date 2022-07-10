@@ -42,40 +42,32 @@
                         <form>
                             <div  id="question-title">
                                 <label for="question1">Question 1/15</label>
-                                <div class="counter"></div>
+                                <label for="delay-counter">30</label>
+                                <div class="counter-loader"></div>
+                                <div class="bg-counter-loader"></div>
                             </div>
                             <div class="response">
                                 <div class="input-container">
                                     <input type="radio" name="question1" value=".ts" id="ts-type">
-                                    <label for="ts-type">.ts</label>
+                                    <label for="ts-type" class="response-value">.ts</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" value=".jsx" id="jsx-type">
-                                    <label for="jsx-type">.jsx</label>
+                                    <input type="radio" name="question1" value=".jsx" id="jsx-type" checked>
+                                    <label for="jsx-type" class="response-value">.jsx</label>
                                 </div>
                                 <div class="input-container">
                                     <input type="radio" name="question1" value=".js" id="js-type">
-                                    <label for="js-type">.js</label>
+                                    <label for="js-type" class="response-value">.js</label>
                                 </div>
                                 <div class="input-container">
                                     <input type="radio" name="question1" value=".j" id="j-type">
-                                    <label for="j-type">.j</label>
+                                    <label for="j-type" class="response-value">.j</label>
                                 </div>
                             </div>
                             <div id="button-container">
                                 <button id="Exit-btn" type="reset">Quitter</button>
                                 <button id="Next-btn" type="submit">Suivant</button>
                             </div>
-                            <!-- <div class="question-timer">
-                                <label for="name">Nom</label>
-                                <input type="text" id="name">
-                                <small id="message-name-shower">répondant aux questions que</small>
-                            </div>
-                            <div class="email-container">
-                                <label for="email">Email</label>
-                                <input type="email" id="email">
-                                <small id="message-email-shower">répondant aux questions que</small>
-                            </div> -->
                         </form>
                     </div>
                     <!-- <div class="form-container">

@@ -112,7 +112,7 @@ p {
 
 .header-topic {
     position: relative;
-   padding: 40px 19px 20px 19px;
+    padding: 40px 19px 20px 19px;
 }
 
 .header-topic p {
@@ -131,35 +131,88 @@ p {
     left: 20px;
 }
 
-.counter {
+label[for=delay-counter] {
+    position: absolute;
+    color: #555555;
+    font-size: 10px;
+    right: 20px;
+}
+
+.response-value {
+    font-size: 15px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.bg-counter-loader {
     padding: 3px;
+    margin-top: -21px;
+    border-radius: 5px;
+    background: #ccc;
+    /* z-index: -1; */
+}
+
+.counter-loader {
+    padding: 3px;
+    width: 50%;
     margin-top: 20px;
     border-radius: 5px;
     background: #028A3D;
     margin-bottom: 15px;
-    border: 1px solid #555555;
+    position: relative;
 }
+
+/* .counter-loader:hover {
+    background: #ccc;
+    transition-duration: .5s;
+    transition-delay: 1s;
+    transition: all 5s linear;
+} */
 
 .response {
     padding: 0px 20px;
     min-width: 89%;
 }
 
+.input-container:first-of-type {
+    margin-top: 20px;
+}
+
 .input-container {
     /* margin-left: 10px; */
-    padding: 13px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 22px;
     border: 1px solid rgba(128, 128, 128, 0.418);
 }
 
+/* .input-container input:checked {
+    border: 1px solid #028A3D;
+} */
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid gray;
+
+}
+input:checked {
+    border-radius: 50%;
+    border: 7px solid #028A3D;
+}
+
 #button-container {
-    gap: 50px;
+    gap: 25px;
     display: flex;
     justify-content: space-between;
 }
 
 #Exit-btn, #Next-btn {
-    width: 100px;
+    width: 140px;
     border: none;
     padding: 10px;
     color: #FFFFFF;
