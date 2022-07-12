@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/css.css">
     <title>Quiz App</title>
 </head>
 <body>
     <!-- START -->
         <div class="container">
-                    <!-- Interface-0 -->
-                    <!-- <div class="form-container">
+                    <!-- Home-Interface -->
+                    <div class="form-container">
                         <form>
                             <div class="header">
                                 <h1>Javascript Quiz</h1>
@@ -22,7 +22,7 @@
                             </div>
                             <div class="name-container">
                                 <label for="name">Nom</label>
-                                <input type="text" id="name" placeholder="abija">
+                                <input type="text" id="name" placeholder="Enter at least 3 letters">
                                 <small id="message-name-shower"></small>
                             </div>
                             <div class="email-container">
@@ -30,9 +30,11 @@
                                 <input type="email" id="email" placeholder="abija@gmail.com">
                                 <small id="message-email-shower"></small>
                             </div>
-                            <button id="commencer-btn" type="submit">Commencer</button>
+                            <div id="start-btn-container">
+                                <button id="commencer-btn" type="submit">Commencer</button>
+                            </div>
                         </form>
-                    </div> -->
+                    </div>
 
                     <!-- Interface-1 -->
                     <!-- <div class="form-container">
@@ -48,19 +50,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1" value=".ts" id="ts-type">
+                                    <input type="radio" name="question1" value=".ts" id="ts-type" class="radio-input">
                                     <label for="ts-type" class="response-value">.ts</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" value=".jsx" id="jsx-type" checked>
+                                    <input type="radio" name="question1" value=".jsx" id="jsx-type" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">.jsx</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" value=".js" id="js-type">
+                                    <input type="radio" name="question1" value=".js" id="js-type" class="radio-input">
                                     <label for="js-type" class="response-value">.js</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" value=".j" id="j-type">
+                                    <input type="radio" name="question1" value=".j" id="j-type" class="radio-input">
                                     <label for="j-type" class="response-value">.j</label>
                                 </div>
                             </div>
@@ -85,19 +87,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">La balise js</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">La balise javascript</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">La balise script</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">La balise rel</label>
                                 </div>
                             </div>
@@ -122,19 +124,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">sum()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">call function sum()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">call sum()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">aucune bonne reponse</label>
                                 </div>
                             </div>
@@ -159,19 +161,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">img</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">em</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">br</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">Toutes les réponses sont vrais</label>
                                 </div>
                             </div>
@@ -196,19 +198,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">Tester si la valeur est une chaine de caractères</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">Tester si la valeur est un nombre</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">Tester si la valeur est un objet</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">Tester si la valeur est un tableau</label>
                                 </div>
                             </div>
@@ -233,19 +235,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">msg("Hello World");</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">alert("Hello World");</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">msgBox("Hello World");</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">alertBox("Hello World");</label>
                                 </div>
                             </div>
@@ -270,19 +272,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">if a = 2 then</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">if a = 2</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">if a == 2 else</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">if (a == 2)</label>
                                 </div>
                             </div>
@@ -307,19 +309,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">if a <> 2</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">if (a != 2)</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">if a =! 2 then</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">if (a <> 2)</label>
                                 </div>
                             </div>
@@ -343,19 +345,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">function f()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">function = f()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">function:f()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">Aucune de ces réponses n’est vraie.</label>
                                 </div>
                             </div>
@@ -380,19 +382,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">if (c == "XYZ") then { } else { }</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">if (c = "XYZ") then { } else { }</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">if (c == "XYZ") { } else { }</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">if (c = "XYZ") { } else { }</label>
                                 </div>
                             </div>
@@ -417,19 +419,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">tar</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">constante</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">constan</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">const</label>
                                 </div>
                             </div>
@@ -454,19 +456,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">html</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">head</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">body</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">footer</label>
                                 </div>
                             </div>
@@ -491,19 +493,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">pour qu'il soit lu en dernier</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">pour le design</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">pour le style</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">pour la forme</label>
                                 </div>
                             </div>
@@ -528,19 +530,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">compile()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">exec()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">test()</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">var</label>
                                 </div>
                             </div>
@@ -552,7 +554,7 @@
                     </div> -->
 
                     <!-- Interface-15 -->
-                    <div class="form-container">
+                    <!-- <div class="form-container">
                         <div class="header-topic">
                             <p>Comment declarer une expression reguliere en Js ?</p>
                         </div>
@@ -565,19 +567,19 @@
                             </div>
                             <div class="response">
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="ts-type" class="response-value">let regex = /expression/</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1" checked>
+                                    <input type="radio" name="question1" checked class="radio-input">
                                     <label for="jsx-type" class="response-value">let regex = expression</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="js-type" class="response-value">let regex new = expression</label>
                                 </div>
                                 <div class="input-container">
-                                    <input type="radio" name="question1">
+                                    <input type="radio" name="question1" class="radio-input">
                                     <label for="j-type" class="response-value">let regex = "expression"</label>
                                 </div>
                             </div>
@@ -586,9 +588,32 @@
                                 <button id="Next-btn" type="submit">Suivant</button>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
+
+                    <!-- Success-Interface -->
+                    <!-- <div class="assign-container">
+                        <h1>Karis</h1>
+                        <p class="email-paragraph">karis@gmail.com</p>
+                        <div class="check-assignment"><img src="assets/img/success-icon.png" alt=""></div>
+                        <div id="button-container">
+                            <button id="Exit-btn" type="reset">Quitter</button>
+                            <button id="Next-btn" type="submit">Suivant</button>
+                        </div>
+                    </div> -->
+
+                    <!-- Failure-Interface -->
+                    <!-- <div class="assign-container">
+                        <h1>Karis</h1>
+                        <p class="email-paragraph">karis@gmail.com</p>
+                        <div class="check-assignment"><img src="assets/img/failure-icon.jpg" alt=""></div>
+                        <div id="button-container">
+                            <button id="Exit-btn" type="reset">Quitter</button>
+                            <button id="Next-btn" type="submit">Suivant</button>
+                        </div>
+                    </div> -->
+
         </div>
     <!-- END -->
 </body>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </html>
