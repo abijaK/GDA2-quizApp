@@ -17,18 +17,29 @@ body{
     overflow: hidden;
 }
 
-.container {
-    max-width: 100%;
-    max-height: 100%;
+.section-1,
+.section-2,
+.section-3
+ {
+     width: 360px;
+     height: 500px;
+     max-width: 100%;
+     max-height: 100%;
+     position: relative;
+    background: #FFFFFF;
 }
 
-.form-container {
+.section-1 {
+    
+}
+
+/* .home-container {
     width: 360px;
     height: 500px;
     position: relative;
     background: #FFFFFF;
     max-width: 100%;
-}
+} */
 
 form {
     position: absolute;
@@ -56,8 +67,8 @@ h1 {
     line-height: 39px;
     text-align: center;
     letter-spacing: 0em;
-    margin-top: 20px;
     color: #555555;
+    margin-top: 20px;
 }
 
 p {
@@ -75,9 +86,15 @@ p {
     display: flex;
     position: relative;
     flex-direction: column;
-    /* margin: 0 10px; */
-    /* padding: 0; */
-    /* box-sizing: border-box; */
+}
+
+.name-container input:focus, .email-container input:focus {
+    outline: 0;
+}
+
+.name-container label, .email-container label{
+    color: #555555;
+    font-size: 12px;
 }
 
 .name-container input, .email-container input {
@@ -89,25 +106,34 @@ p {
     border: 1px solid #DDDDDD;
 }
 
-/* .name-container input:focus, .email-container input:focus-within{
-    border: none;
+#errorName, #errorEmail {
+    font-size: 8.5px;
+    color: #FF3838;
+}
+
+/* #name {
+    border: 1px solid #FF3838;
 } */
 
-.name-container label, .email-container label{
-    color: #555555;
-    font-size: 14px;
-}
+/* .home-container #name {} */
+
+/* #email {
+    border: 1px solid #FF3838;
+} */
+
+/* .home-container #email {} */
 
 #start-btn-container {
     width: 100%;
-    padding: 20px;
+    font-size: 14px;
+    padding: 7px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#commencer-btn {
+#start-btn {
     padding: 10px;
     width: 150px;
     color: #FFFFFF;
@@ -118,25 +144,41 @@ p {
     box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
 }
 
+#start-btn:hover{
+    background: #028A3Dc2;
+    font-weight: 700;
+}
 /* =====================
     Style for Questions 
    ===================== */
 
-.header-topic {
+.section-2 {
+    display: none;
+}
+
+/* .form-question {
+    width: 360px;
+    height: 500px;
+    position: relative;
+    background: #FFFFFF;
+    max-width: 100%;
+} */
+
+.question-title {
     position: relative;
     padding: 40px 19px 20px 19px;
 }
 
-.header-topic p {
+.question-title h4 {
     text-align: center;    
 }
 
-#question-title {
+#question-num {
     padding: 0px 20px 0px 20px;
     min-width: 100%;
 }
 
-#question-title label[for=question1]{
+#question-num label[for=question1]{
     position: absolute;
     color: #555555;
     font-size: 10px;
@@ -150,21 +192,19 @@ label[for=delay-counter] {
     right: 20px;
 }
 
-.response-value {
-    font-size: 15px;
-    color: gray;
-    margin-left: 5px;
-}
 
-.bg-loading-bar {
-    padding: 3px;
-    margin-top: -21px;
+.unprogress-bar {
+    padding: 0px 3px;
+    /* margin-top: -21px; */
     border-radius: 5px;
-    background: #ccc;
-    /* z-index: -1; */
+    width: 100% ;
+    /* background-color: #ccc; */
+    z-index: -1;
+    position: absolute;
 }
 
-.loading-bar {
+.unprogress-bar .backgroung{
+    /* z-index: -1; */
     padding: 3px;
     width: 50%;
     margin-top: 20px;
@@ -202,7 +242,7 @@ label[for=delay-counter] {
     border: 1px solid #028A3D;
 } */
 
-.radio-input {
+.response .radio-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -213,23 +253,34 @@ label[for=delay-counter] {
     border: 1px solid gray;
 
 }
-.radio-input:checked {
+.response .radio-input:checked {
     border-radius: 50%;
     border: 7px solid #028A3D;
 }
 
-#button-container {
-    gap: 25px;
+.response .response-value {
+    font-size: 15px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.Question-btn-container {
+    text-align: center;
+}
+
+#result-btn-container {
+    gap: 2rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 20px;
+    padding: 215x;
 }
 
 #Exit-btn, #Next-btn {
-    width: 140px;
+    width: 120px;
     border: none;
     padding: 10px;
+    margin: 0px 15px;
     color: #FFFFFF;
     font-weight: 500;
     box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
@@ -239,25 +290,120 @@ label[for=delay-counter] {
     background: orange;
 }
 
+
+#Exit-btn:hover{
+    background: rgba(255, 166, 0, 0.653);
+    font-weight: 700;
+}
+
 #Next-btn {
     background: #028A3D;
 }
 
+
+#Next-btn:hover{
+    background: #028A3Dc2;
+    font-weight: 700;
+}
 /* ======================
     Style for the result
    ======================
 */
 
-.assign-container {
-    box-sizing: border-box;
-    width: 355px;
+.section-3 {
+    display: none;
+    width: 360px;
     height: 500px;
+    position: relative;
+    flex-direction: column;
+    background: #FFFFFF;
+    max-width: 100%;
+}
+
+.result-output {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    position: relative;
-    background: #FFFFFF;
-    max-width: 100%;
+    gap: 2rem;
+    padding: 80px;
+    max-height: 500px;
+    min-height: 500px;
 }
+
+.result-output .success{
+    
+}
+
+#customer-name,
+#customer-email
+{
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.icon-check-result {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 100%;
+    align-items: center;
+}
+
+.icon-check-result .checked-result {
+    display: none;
+    /* display: block; */
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border: 10px solid #00d830;
+    border-radius: 100%;
+}
+
+.icon-check-result .crossed-result {
+    /* display: none; */
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    border: 10px solid #FF0000;
+    border-radius: 100%;
+}
+
+.checked-result img {
+
+}
+
+.crossed-result img {
+    width: 100px;
+    height: 100px;
+}
+
+.ShowResult {
+    display: flex;
+}
+
+#accueil{
+    padding: 10px;
+    width: 150px;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+    border: none;
+    border-radius: 1px;
+    background: #1ebfe3de;
+    box-shadow: 0px 2.5px 4px rgba(128, 128, 128, 0.63);
+}
+
+#accueil:hover{
+    background: #116a7ec2;
+    font-weight: 700;
+}
+
+/* .btn .return-home {
+
+}
+
+.btn .return-home #accueil {
+
+} */

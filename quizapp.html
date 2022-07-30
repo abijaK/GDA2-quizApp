@@ -9,611 +9,112 @@
 </head>
 <body>
     <!-- START -->
-        <div class="container">
-                    <!-- Home-Interface -->
-                    <div class="form-container">
-                        <form>
-                            <div class="header">
-                                <h1>Javascript Quiz</h1>
-                                <p>Évaluez vos connaissances en JavaScript en 
-                                    <br>répondant aux questions que nous avons 
-                                    <br>spécialement sélectionnées pour vous. 
-                                    <br>C'est fun et c'est gratuit.</p>
-                            </div>
-                            <div class="name-container">
-                                <label for="name">Nom</label>
-                                <input type="text" id="name" placeholder="Enter at least 3 letters">
-                                <small id="message-name-shower"></small>
-                            </div>
-                            <div class="email-container">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="abija@gmail.com">
-                                <small id="message-email-shower"></small>
-                            </div>
-                            <div id="start-btn-container">
-                                <button id="commencer-btn" type="submit">Commencer</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Interface-1 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Quel est le type d'un fichier javascript ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">30</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" value=".ts" id="ts-type" class="radio-input">
-                                    <label for="ts-type" class="response-value">.ts</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" value=".jsx" id="jsx-type" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">.jsx</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" value=".js" id="js-type" class="radio-input">
-                                    <label for="js-type" class="response-value">.js</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" value=".j" id="j-type" class="radio-input">
-                                    <label for="j-type" class="response-value">.j</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-2 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Quel est le type d'un fichier javascript ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">La balise js</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">La balise javascript</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">La balise script</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">La balise rel</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-                    
-                    <!-- Interface-3 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment faire appelle à une fonction nommée « sum » ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">sum()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">call function sum()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">call sum()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">aucune bonne reponse</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-4 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Quelle est la balise pour integrer une image sur une page web ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">img</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">em</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">br</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">Toutes les réponses sont vrais</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-5 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>A quoi sert la methode isNan ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">Tester si la valeur est une chaine de caractères</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">Tester si la valeur est un nombre</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">Tester si la valeur est un objet</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">Tester si la valeur est un tableau</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-6 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment écrivez-vous « Hello World » dans une boîte d’alerte ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">msg("Hello World");</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">alert("Hello World");</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">msgBox("Hello World");</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">alertBox("Hello World");</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-7 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment écrire une condition IF en JavaScript ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">if a = 2 then</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">if a = 2</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">if a == 2 else</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">if (a == 2)</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-8 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment écrire une condition IF pour vérifier si « a » n’est PAS égal à 2 ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">if a <> 2</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">if (a != 2)</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">if a =! 2 then</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">if (a <> 2)</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment créer une fonction en JavaScript ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">function f()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">function = f()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">function:f()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">Aucune de ces réponses n’est vraie.</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-10 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Quelle est la syntaxe correcte pour vérifier la valeur de « c » ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">if (c == "XYZ") then { } else { }</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">if (c = "XYZ") then { } else { }</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">if (c == "XYZ") { } else { }</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">if (c = "XYZ") { } else { }</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-11 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Quelle est la syntaxe pour cree une constante en javascript ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">tar</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">constante</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">constan</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">const</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-12 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Dans quelle balise Html est conseillé de placer le chemin du script ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">html</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">head</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">body</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">footer</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-13 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Dans quelle balise HPourquoi on met le script en bas dans la balyse body ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">pour qu'il soit lu en dernier</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">pour le design</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">pour le style</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">pour la forme</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-14 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Pourquoi on met le script en bas dans la balyse body ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">compile()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">exec()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">test()</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">var</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Interface-15 -->
-                    <!-- <div class="form-container">
-                        <div class="header-topic">
-                            <p>Comment declarer une expression reguliere en Js ?</p>
-                        </div>
-                        <form>
-                            <div  id="question-title">
-                                <label for="question1">Question 1/15</label>
-                                <label for="delay-counter">60</label>
-                                <div class="loading-bar"></div>
-                                <div class="bg-loading-bar"></div>
-                            </div>
-                            <div class="response">
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="ts-type" class="response-value">let regex = /expression/</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" checked class="radio-input">
-                                    <label for="jsx-type" class="response-value">let regex = expression</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="js-type" class="response-value">let regex new = expression</label>
-                                </div>
-                                <div class="input-container">
-                                    <input type="radio" name="question1" class="radio-input">
-                                    <label for="j-type" class="response-value">let regex = "expression"</label>
-                                </div>
-                            </div>
-                            <div id="button-container">
-                                <button id="Exit-btn" type="reset">Quitter</button>
-                                <button id="Next-btn" type="submit">Suivant</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- Success-Interface -->
-                    <!-- <div class="assign-container">
-                        <h1>Karis</h1>
-                        <p class="email-paragraph">karis@gmail.com</p>
-                        <div class="check-assignment"><img src="assets/img/success-icon.png" alt=""></div>
-                        <div id="button-container">
-                            <button id="Exit-btn" type="reset">Quitter</button>
-                            <button id="Next-btn" type="submit">Suivant</button>
-                        </div>
-                    </div> -->
-
-                    <!-- Failure-Interface -->
-                    <!-- <div class="assign-container">
-                        <h1>Karis</h1>
-                        <p class="email-paragraph">karis@gmail.com</p>
-                        <div class="check-assignment"><img src="assets/img/failure-icon.jpg" alt=""></div>
-                        <div id="button-container">
-                            <button id="Exit-btn" type="reset">Quitter</button>
-                            <button id="Next-btn" type="submit">Suivant</button>
-                        </div>
-                    </div> -->
-
+    <section class="section-1">
+        <!-- Home-Interface -->
+        <div class="home-container">
+            <form class="home-form">
+                <div class="header">
+                    <h1>Javascript Quiz</h1>
+                    <p>Évaluez vos connaissances en JavaScript en 
+                        <br>répondant aux questions que nous avons 
+                        <br>spécialement sélectionnées pour vous. 
+                        <br>C'est fun et c'est gratuit.</p>
+                </div>
+                <div class="name-container">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" placeholder="Entrer votre nom">
+                    <small id="warningName"></small>
+                </div>
+                <div class="email-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Entrer votre email">
+                    <small id="warningEmail"></small>
+                </div>
+                <div id="start-btn-container"></div><!-- btn log -->
+                    <button id="start-btn" type="submit">Commencer</button>
+                </div>
+            </form>
         </div>
+    </section>
+        <!-- Question-Interface -->
+    <section class="section-2">
+        <div class="form-question">
+            <div class="question-title"> <!-- container -->
+                <h4>Quel est le type d'un fichier javascript ?</h4>
+            </div>
+            <form>
+                <div  id="question-num"> <!-- mbrquestion -->
+                    <div>
+                        <span >Question</span>
+                        <span class="leftNumber">1</span><span id="bar">/</span>
+                        <span id="rightNumber">15</span>
+                    </div>
+                    <div>
+                        <label id="delay-counter">60</label> <!-- timer -->
+                        <div class="unprogress-bar backgroung"> <!-- niveauExt -->
+                            <div class="unprogress-bar"></div> <!-- niveaufull -->
+                        </div>
+                    </div>
+                </div>
+                <div class="response">
+                    <div class="input-container">
+                        <input type="radio" name="question1" value="" class="radio-input">
+                        <label class="response-value"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="radio" name="question1" value="" checked class="radio-input">
+                        <label class="response-value"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="radio" name="question1" value="" class="radio-input">
+                        <label class="response-value"></label>
+                    </div>
+                    <div class="input-container">
+                        <input type="radio" name="question1" value="" class="radio-input">
+                        <label class="response-value"></label>
+                    </div>
+                </div>
+                <div id="Question-btn-container"> <!-- btn foot -->
+                    <button id="Exit-btn" type="reset">Quitter</button> <!-- btngameleft -->
+                    <button id="Next-btn" type="submit">Suivant</button> <!-- btngameright -->
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success-Interface -->
+    <section class="section-3">
+        <div class="result-output success">
+            <h4 id="customer-name">Karis</h4>
+            <p id="customer-email">karis@gmail.com</p>
+            <div class="icon-check-result">
+                <div class="checked-result">
+                    <img src="assets/svg/bx-check.svg" alt="">
+                </div>
+                <div class="crossed-result">
+                    <img src="assets/svg/bx-x.svg" alt="">
+                </div>
+            </div>
+            <div class="ShowResult">
+                <span id="resultNumber"></span><span>/15</span>
+            </div>
+            <div class="btn returnBack">
+                <button type ="submit" id="accueil">Accueil</button>
+            </div>
+        </div>
+    </section>
     <!-- END -->
+
+        <!-- Failure-Interface -->
+        <!-- <div id="resultOutputFailure">
+            <h1 id="customer-name">Karis</h1>
+            <p class="email-paragraph">karis@gmail.com</p>
+            <div class="check-result"><img src="assets/img/failure-icon.jpg" alt=""></div>
+            <div id="result-btn-container">
+                <button id="Exit-btn" type="reset">Quitter</button>
+                <button id="Next-btn" type="submit">Suivant</button>
+            </div>
+        </div> -->
 </body>
 <script src="js/script.js"></script>
 </html>
