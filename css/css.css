@@ -30,7 +30,7 @@ body{
 }
 
 .section-1 {
-    
+    display: none;
 }
 
 /* .home-container {
@@ -153,7 +153,7 @@ p {
    ===================== */
 
 .section-2 {
-    display: none;
+    /* display: none; */
 }
 
 /* .form-question {
@@ -170,7 +170,8 @@ p {
 }
 
 .question-title h4 {
-    text-align: center;    
+    text-align: center; 
+    color: #555555;
 }
 
 #question-num {
@@ -198,8 +199,8 @@ label[for=delay-counter] {
     /* margin-top: -21px; */
     border-radius: 5px;
     width: 100% ;
-    /* background-color: #ccc; */
-    z-index: -1;
+    background-color: #555555;
+    /* z-index: -1; */
     position: absolute;
 }
 
@@ -209,7 +210,7 @@ label[for=delay-counter] {
     width: 50%;
     margin-top: 20px;
     border-radius: 5px;
-    background: #028A3D;
+    background-color: #028A3D;
     margin-bottom: 15px;
     position: relative;
 }

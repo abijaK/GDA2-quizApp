@@ -10,9 +10,9 @@ const mainOutput = document.querySelector('.section-3')
 // Form connexion elements
 const form = document.querySelector('.home-form');
 // const input = document.querySelectorAll('input');
-const username = document.querySelector('.home-container #name');
+const username = document.querySelector('#name');
 const nameError = document.querySelector('#warningName');
-const email = document.querySelector('.home-container #email');
+const email = document.querySelector('#email');
 const emailError = document.querySelector('#warningEmail');
 
 const startBtn = document.querySelector('#start-btn');
@@ -22,11 +22,11 @@ ELEMENT OF ALL QUESTIONS UI
 */
 // Selections of containers
 const questionTitle = document.querySelector('.question-title h4');
-const questionNumber = document.querySelector('question-num');
+const questionNumber = document.querySelector('#question-num');
 const selectedQuestionNum = document.querySelector('#leftNumber');
 const totalQuestionNum = document.querySelector('#rightNumber');
 const maxDelay = document.querySelector('#delay-counter');
-const backDecreaseBar = document.querySelector('.unprogress-bar .backgroung');
+const backDecreaseBar = document.querySelector('.back-unprogress-bar');
 const decreaseBar = document.querySelector('.unprogress-bar');
 const answerCover = document.querySelector('.response');
 const questionAssertions = document.querySelector('.response .radio-input');
@@ -85,7 +85,7 @@ const nameValidator = () => {
     if (!regex.test(fullName)) {
         nameError.innerHTML = message;
         nameError.style.color = 'red';
-        username.style.border = '1px solid green';
+        username.style.border = '1px solid red';
     }else {
         username.style.border = '1px solid none';
         nameError.innerHTML = '';
@@ -95,14 +95,14 @@ const nameValidator = () => {
 
 // Email validation
 const emailValidator = () => {
-    let regex = /^[a-zA-Z0-9.-_]{4,250}+[@]{3,50}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/g;
-    let = 'N\’oubliez pas de renseigner votre Email avant de commencer le Quiz.';
+    let regex = /^([a-zA-Z\._\-0-9]{4,250})@([a-zA-Z0-9]{3,50})\.([a-zA-Z]{2,5})$/g;
+    let message = 'N\’oubliez pas de renseigner votre Email avant de commencer le Quiz.';
 
     const fullEmail = email.value.trim();
     if (!regex.test(fullEmail)) {
         emailError.innerHTML = message;
         emailError.style.color = 'red';
-        email.style.border = '1px solid green';
+        email.style.border = '1px solid red';
     } else {
         email.style.border = '1px solid none';
         emailError.innerHTML = '';
@@ -111,7 +111,7 @@ const emailValidator = () => {
 }
 
 /*
-CONDITION TO RUN QUESTIONS FOR QUIZ
+CHECK IF NAME & EMAIL BOTH ARE VALID TO RUN QUESTIONS OF THE QUIZ
  */ 
 
 // store & score initialisation for questions
@@ -148,12 +148,113 @@ const nextQuestion = () => {
 
 const showResultOutputIcon = () => {
     if (score < 8) {
-        
-    } else {
-        
+        checkedIcon.style.display = 'none';
+    } else if (score >=8) {
+        crossedIcon.style.display = 'none';
     }
 }
 
+const isPressedExitBtn = () => {
+    mainOutput.style.display = 'block';
+    mainQuestion.style.display = 'none';
+    customerName.innerHTML = username.value;
+    customerEmail.innerHTML = email.value;
+}
+
+/* 
+ADD A TIMER FUNCTION FOR BAR PROGRESSION
+*/
+let timerWidth = 100;
+let startTime = 60;
+
+counter = () => {
+    if (startTime > 0) {
+        questionNumber.innerHTML = `${startTime}`;
+        timerWidth = timerWidth - (100 / 60);
+        decreaseBar.style.width = `${timerWidth}%`;
+        startTime--;
+    } else if (startTime == 0) {
+        nextQuestion();
+        startTime = 60;
+        timerWidth = 100;
+    }
+}
+
+/* Functions to disable the button next if input are empty,
+            then nextQuestion() won't be runned             */
+const disabledNextBtn = () => {
+    nextBtn.style.backDecreaseBar = '#028A3D';
+    nextBtn.style.cursor = 'not-allowed';
+}
+
+const confirmNextQuestion = () => {
+    for (let i = 0; i < questionAssertions.length; i++) {
+        if (questionAssertions[i].checked) {
+            nextQuestion();
+            startTime = 60;
+            timerWidth = 100;
+        }    
+    }
+}
+
+// Add function to increment the score
+const incrementScore = () => {
+    questionAssertions.forEach((element, index) => {
+        if (element.checked && questionAssertions[store -1].corrector  == index) {
+            store++;
+            console.log(store);
+        }
+        element.checked = false;
+    });
+}
+
+// Add function to return Home Page
+const returnHomePage = () => {
+    mainOutput.style.display = 'none';
+    mainHeader.style.display = 'block';
+}
+
+/* 
+FUNCTION FOR LISTENING EVENTS
+*/
+// Add Listeners for the Login Page on .section-1
+username.addEventListener('input', () => {
+    nameValidator(this);
+});
+
+email.addEventListener('input', () => {
+    emailValidator(this);
+});
+
+startBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    onRunningQuestion(this);
+    setInterval(counter, 1000);
+    decreaseBar.style.display = 'block';
+});
+
+// Add Listeners for Question asssertions on .section-2
+answerCover.addEventListener('click', () => {
+    nextBtn.style.backGroundColor = 'rgb(0, 221, 255)';
+    nextBtn.style.cursor = 'pointer';
+});
+
+exitBtn.addEventListener('click', () => {
+    isPressedExitBtn(this);
+    showResultOutputIcon(this);
+});
+
+nextBtn.addEventListener('click', () => {
+    confirmNextQuestion();
+    disabledNextBtn();
+    incrementScore(this);
+});
+
+// Add Listerner for Output on .section-3
+accueilBtn.addEventListener('click', () => {
+    returnHomePage(this);
+    location.reload();
+});
 
 
 // form.addEventListener('click', (e) => {
