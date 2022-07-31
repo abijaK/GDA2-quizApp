@@ -9,8 +9,8 @@
 </head>
 <body>
     <!-- START -->
+    <!-- Home-Interface -->
     <section class="section-1">
-        <!-- Home-Interface -->
         <div class="home-container">
             <form class="home-form">
                 <div class="header">
@@ -30,30 +30,31 @@
                     <input type="email" id="email" placeholder="Entrer votre email">
                     <small id="warningEmail"></small>
                 </div>
-                <div id="start-btn-container"></div><!-- btn log -->
+                <div id="start-btn-container"></div>
                     <button id="start-btn" type="submit">Commencer</button>
                 </div>
             </form>
         </div>
     </section>
+    
         <!-- Question-Interface -->
     <section class="section-2">
         <div class="form-question">
-            <div class="question-title"> <!-- container -->
+            <div class="question-title">
                 <h4>Quel est le type d'un fichier javascript ?</h4>
             </div>
             <form>
-                <div  id="question-num"> <!-- mbrquestion -->
-                    <div>
-                        <span >Question</span>
-                        <span id="leftNumber">1</span><span id="bar">/</span>
-                        <span id="rightNumber">15</span>
-                    </div>
-                    <div>
-                        <label id="delay-counter">60</label> <!-- timer -->
-                        <div class="back-unprogress-bar"> <!-- niveauExt -->
-                            <div class="unprogress-bar"></div> <!-- niveaufull -->
+                <div  id="question-num">
+                    <div class="flex-bar-label">
+                        <div>
+                            <span >Question</span>
+                            <span id="leftNumber">1</span><span id="bar">/</span>
+                            <span id="rightNumber">15</span>
                         </div>
+                        <label id="delay-counter">60</label> 
+                    </div>
+                    <div class="back-unprogress-bar"> 
+                        <div class="unprogress-bar"></div>
                     </div>
                 </div>
                 <div class="response">
@@ -74,10 +75,10 @@
                         <label class="response-value"></label>
                     </div>
                 </div>
-                <div id="Question-btn-container"> <!-- btn foot -->
-                    <button id="Exit-btn" type="reset">Quitter</button> <!-- btngameleft -->
-                    <button id="Next-btn" type="submit">Suivant</button> <!-- btngameright -->
-                </div>
+                <div id="Question-btn-container">
+                    <button id="Exit-btn" type="reset">Quitter</button> 
+                    <button id="Next-btn" type="submit">Suivant</button> 
+                 </div>
             </form>
         </div>
     </section>
