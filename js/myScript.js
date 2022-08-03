@@ -29,7 +29,7 @@ const maxDelay = document.querySelector('#delay-counter');
 const backDecreaseBar = document.querySelector('.back-unprogress-bar');
 const decreaseBar = document.querySelector('.unprogress-bar');
 const answerCover = document.querySelector('.response');
-const questionAssertions = document.querySelector('.response .radio-input');
+const questionAssertions = document.querySelectorAll('.response .radio-input');
 const questionAssertLabel = document.querySelectorAll('.response .response-value');
 
 const exitBtn = document.querySelector('#Exit-btn');
@@ -49,11 +49,14 @@ const accueilBtn = document.querySelector('#accueil');
 INITIALISATION OF THE CONSTRUCTOR OF QUESTIONS
  */
 
-function Question(question="", answer=[""], corrector =0) {
-    this.question = question;
-    this.answer = answer;
-    this.corrector = corrector;
- }
+class Question {
+    constructor(question, answer, corrector){
+        this.question = question;
+        this.answer = answer;
+        this.corrector = corrector;
+    }
+}
+
  const questionBank = [
     new Question(`Dans quel balise HTML plaçons-nous le code JavaScript?`, [`La balise js`,`La balise javascript`,`La balise script`,`La balise rel`],2),
     new Question(`Comment faire appelle à une fonction nommée « sum »?`, [`sum()`,`call function sum()`,`call sum()`,`aucune bonne reponse`],0),
@@ -71,24 +74,23 @@ function Question(question="", answer=[""], corrector =0) {
     new Question(`Comment declarer une expression reguliere en Js ?`, [`let regex = /expression/`,`let regex = expression`,`let regex new = expression`,`let regex = "expression"`],2),
     new Question(`Quelle est la syntaxe utiliser pour déclarer une fonction en JavaScript?`, [`define`,`function`,`def`,`fonction`],1)
  ]
- 
 
 /* 
 INITIALISATION OF FUNCTIONS 
 */
-// Name validation
+// Username validation
 const nameValidator = () => {
     let regex = /^([a-z A-Z]{4,50})$/;
     let message = 'N\’oubliez pas de renseigner votre nom avant de commencer le Quiz.';
     
     const fullName = username.value.trim();
     if (!regex.test(fullName)) {
-        nameError.innerHTML = message;
+        nameError.textContent = message;
         nameError.style.color = 'red';
         username.style.border = '1px solid red';
     }else {
         username.style.border = '1px solid none';
-        nameError.innerHTML = '';
+        nameError.textContent = '';
         return true;
     }
 }
@@ -100,12 +102,12 @@ const emailValidator = () => {
 
     const fullEmail = email.value.trim();
     if (!regex.test(fullEmail)) {
-        emailError.innerHTML = message;
+        emailError.textContent = message;
         emailError.style.color = 'red';
         email.style.border = '1px solid red';
     } else {
         email.style.border = '1px solid none';
-        emailError.innerHTML = '';
+        emailError.textContent = '';
         return true;
     }
 }
@@ -131,19 +133,22 @@ const onRunningQuestion = () => {
 // GO TO THE NEXT QUESTION
 const nextQuestion = () => {
     store++;
-    if (store == 15) {
+    if (store < 15) {
+        selectedQuestionNum.textContent = store + 1;
+        showResultOutputIcon.textContent = score;
+        questionTitle.textContent = questionBank[store].question;
+        questionAssertLabel.forEach((element, index) => {
+        element.textContent = questionBank[store].answer[index];
+        });
+    }else if (store == 15) {
         mainOutput.style.display = 'block';
         mainQuestion.style.display = 'none';
-        customerName.innerHTML = username.value;
-        customerEmail.innerHTML = email.value;
+        customerName.textContent = username.value;
+        customerEmail.textContent = email.value;
         showResultOutputIcon(this);
         incrementScore(this);
     }
-    selectedQuestionNum.innerHTML = store + 1;
-    checkedIcon.innerHTML = questionBank[store].question;
-    questionAssertLabel.forEach((element, index) => {
-        element.innerHTML = questionBank[store].answer[index];
-    });
+    
 }
 
 const showResultOutputIcon = () => {
@@ -157,8 +162,8 @@ const showResultOutputIcon = () => {
 const isPressedExitBtn = () => {
     mainOutput.style.display = 'block';
     mainQuestion.style.display = 'none';
-    customerName.innerHTML = username.value;
-    customerEmail.innerHTML = email.value;
+    customerName.textContent = username.value;
+    customerEmail.textContent = email.value;
 }
 
 /* 
@@ -169,7 +174,7 @@ let startTime = 60;
 
 counter = () => {
     if (startTime > 0) {
-        questionNumber.innerHTML = `${startTime}`;
+        questionNumber.textContent = `${startTime}`;
         timerWidth = timerWidth - (100 / 60);
         decreaseBar.style.width = `${timerWidth}%`;
         startTime--;
@@ -200,7 +205,7 @@ const confirmNextQuestion = () => {
 // Add function to increment the score
 const incrementScore = () => {
     questionAssertions.forEach((element, index) => {
-        if (element.checked && questionAssertions[store -1].corrector  == index) {
+        if (element.checked && questionBank[store -1].corrector  == index) {
             store++;
             console.log(store);
         }
@@ -244,7 +249,8 @@ exitBtn.addEventListener('click', () => {
     showResultOutputIcon(this);
 });
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     confirmNextQuestion();
     disabledNextBtn();
     incrementScore(this);
