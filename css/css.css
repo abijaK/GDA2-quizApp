@@ -34,14 +34,6 @@ body{
     display: block;
 }
 
-/* .home-container {
-    width: 360px;
-    height: 500px;
-    position: relative;
-    background: #FFFFFF;
-    max-width: 100%;
-} */
-
 form {
     position: absolute;
     width: 100%;
@@ -111,18 +103,6 @@ p {
     font-size: 8.5px;
     color: #FF3838;
 }
-
-/* #name {
-    border: 1px solid #FF3838;
-} */
-
-/* .home-container #name {} */
-
-/* #email {
-    border: 1px solid #FF3838;
-} */
-
-/* .home-container #email {} */
 
 #start-btn-container {
     width: 100%;
@@ -308,10 +288,6 @@ p {
     min-height: 500px;
 }
 
-/* .result-output .success{
-    
-} */
-
 #customer-name{
     text-align: center;
     font-size: 24px;
@@ -351,10 +327,6 @@ p {
     border-radius: 100%;
 }
 
-/* .checked-result img {
-
-} */
-
 .crossed-result img {
     width: 100px;
     height: 100px;
@@ -380,11 +352,3 @@ p {
     background: #116a7ec2;
     font-weight: 700;
 }
-
-/* .btn .return-home {
-
-}
-
-.btn .return-home #accueil {
-
-} */

@@ -23,7 +23,8 @@ ELEMENT OF ALL QUESTIONS UI
 // Selections of containers
 const questionTitle = document.querySelector('.question-title h4');
 const questionNumber = document.querySelector('#question-num');
-const selectedQuestionNum = document.querySelector('#leftNumber');
+const leftNumber = document.querySelector('#leftNumber');
+
 const totalQuestionNum = document.querySelector('#rightNumber');
 const maxDelay = document.querySelector('#delay-counter');
 const backDecreaseBar = document.querySelector('.back-unprogress-bar');
@@ -42,7 +43,7 @@ const resultIconContainer = document.querySelector('.icon-check-result');
 const checkedIcon = document.querySelector('.checked-result');
 const crossedIcon = document.querySelector('.crossed-result');
 
-let resultMaX = document.querySelector('#resultNumber');
+let showMaxOfResult = document.querySelector('#resultMaxNum');
 const accueilBtn = document.querySelector('#accueil');
 
 /*
@@ -116,9 +117,10 @@ const emailValidator = () => {
 CHECK IF NAME & EMAIL BOTH ARE VALID TO RUN QUESTIONS OF THE QUIZ
  */ 
 
-// store & score initialisation for questions
-let store = -1;
+// storage & score initialisation for questions
+let storage = -1;
 let score = 0;
+
 const onRunningQuestion = () => {
     if (nameValidator() && emailValidator()) {
         mainHeader.style.display = 'none';
@@ -132,15 +134,19 @@ const onRunningQuestion = () => {
 
 // GO TO THE NEXT QUESTION
 const nextQuestion = () => {
-    store++;
-    if (store < 15) {
-        selectedQuestionNum.textContent = store + 1;
-        showResultOutputIcon.textContent = score;
-        questionTitle.textContent = questionBank[store].question;
+    storage++;
+    if (storage < 14) {
+        score++;
+        
+        console.log(storage);
+
+        leftNumber.innerHTML = storage+1;
+        showResultOutputIcon.innerHTML = score;
+        questionTitle.textContent = questionBank[storage].question;
         questionAssertLabel.forEach((element, index) => {
-        element.textContent = questionBank[store].answer[index];
+        element.textContent = questionBank[storage].answer[index];
         });
-    }else if (store == 15) {
+    }else if (storage == 14) {
         mainOutput.style.display = 'block';
         mainQuestion.style.display = 'none';
         customerName.textContent = username.value;
@@ -154,8 +160,12 @@ const nextQuestion = () => {
 const showResultOutputIcon = () => {
     if (score < 8) {
         checkedIcon.style.display = 'none';
-    } else if (score >=8) {
+        crossedIcon.style.display = 'block';
+        showMaxOfResult.innerHTML = score;
+    } else if (score >= 8) {
         crossedIcon.style.display = 'none';
+        checkedIcon.style.display = 'block';
+        showMaxOfResult.innerHTML = score;
     }
 }
 
@@ -186,7 +196,7 @@ counter = () => {
 }
 
 /* Functions to disable the button next if input are empty,
-            then nextQuestion() won't be runned             */
+            it's means nextQuestion() won't be runned             */
 const disabledNextBtn = () => {
     nextBtn.style.backDecreaseBar = '#028A3D';
     nextBtn.style.cursor = 'not-allowed';
@@ -205,9 +215,9 @@ const confirmNextQuestion = () => {
 // Add function to increment the score
 const incrementScore = () => {
     questionAssertions.forEach((element, index) => {
-        if (element.checked && questionBank[store -1].corrector  == index) {
-            store++;
-            console.log(store);
+        if (element.checked && questionBank[storage-1].corrector  == index) {
+            storage++;
+            console.log(storage);
         }
         element.checked = false;
     });
